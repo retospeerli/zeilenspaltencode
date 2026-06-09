@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zeilen-Spalten-Code</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="badge">10</div>
+      <h1>Geheime Schriften und Tinten</h1>
+    </header>
+
+    <section class="intro card">
+      <div>
+        <h2>Der Zeilen-Spalten-Code</h2>
+        <p>
+          Wähle ein geheimes Passwort. Daraus entsteht ein Schlüssel mit fünf Buchstaben.
+          I und J werden in dieser Verschlüsselung nicht unterschieden.
+        </p>
+      </div>
+      <button id="exampleBtn" class="ghost">Beispiel einsetzen</button>
+    </section>
+
+    <section class="grid">
+      <div class="card controls">
+        <label for="password">Geheimes Passwort</label>
+        <input id="password" value="LAMPE" autocomplete="off" />
+        <p class="hint">Verwendeter 5er-Schlüssel: <strong id="keyView">LAMPE</strong></p>
+
+        <label for="plainText">Klartext</label>
+        <textarea id="plainText" rows="7" placeholder="Schreibe hier deine Nachricht..."></textarea>
+
+        <div class="buttons">
+          <button id="encryptBtn">Verschlüsseln</button>
+          <button id="clearBtn" class="secondary">Leeren</button>
+        </div>
+      </div>
+
+      <div class="card tableCard">
+        <h3>Code-Schlüssel</h3>
+        <div id="codeTable" class="codeTable"></div>
+      </div>
+    </section>
+
+    <section class="card outputCard">
+      <div class="outputHead">
+        <h3>Geheimtext in 5er-Gruppen</h3>
+        <button id="copyBtn" class="ghost">Kopieren</button>
+      </div>
+      <pre id="cipherOut" class="cipher" aria-live="polite"></pre>
+    </section>
+
+    <section class="card controls">
+      <label for="cipherIn">Geheimtext entschlüsseln</label>
+      <textarea id="cipherIn" rows="5" placeholder="Geheimtext hier einfügen..."></textarea>
+      <div class="buttons">
+        <button id="decryptBtn">Entschlüsseln</button>
+      </div>
+      <p id="decryptOut" class="plainOut"></p>
+    </section>
+
+    <footer>
+      <span>Zeilen-Spalten-Code · Unterrichts-App</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
